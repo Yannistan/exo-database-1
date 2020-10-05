@@ -21,11 +21,17 @@ output: INSERT 0 3
 command: SELECT * FROM users;
 
 output:
+
  id |  name   | password 
+
 ----+---------+----------
+
   1 | alice   | 123
+
   2 | bob     | 456
+
   3 | charlie | 789
+
 (3 rows)
 
 ex2:
@@ -39,13 +45,21 @@ command: SELECT * FROM users;
 output:
 
  id |  name   | password 
+
 ----+---------+----------
+
   1 | alice   | 123
+
   2 | bob     | 456
+
   3 | charlie | 789
+
   4 | dan     | 101112
+
   5 | eve     | 131415
+
   6 | faythe  | 161718
+
 (6 rows)
 
 
@@ -56,10 +70,15 @@ command: SELECT * FROM users WHERE length(password) > 3  ;
 output :
 
  id |  name  | password 
+
 ----+--------+----------
+
   4 | dan    | 101112
+
   5 | eve    | 131415
+
   6 | faythe | 161718
+
 (3 rows)
 
 ex4:
@@ -73,13 +92,21 @@ command: SELECT * FROM users;
 output: 
 
  id |  name   | password |      bio      
+
 ----+---------+----------+---------------
+
   1 | alice   | 123      | Hello, world!
+
   2 | bob     | 456      | Hello, world!
+
   3 | charlie | 789      | Hello, world!
+
   4 | dan     | 101112   | Hello, world!
+
   5 | eve     | 131415   | Hello, world!
+
   6 | faythe  | 161718   | Hello, world!
+
 (6 rows)
 
 ex5:
@@ -113,13 +140,21 @@ command: SELECT * FROM users;
 output: 
 
  id |  name   | password |         bio         
+
 ----+---------+----------+---------------------
+
   1 | alice   | 123      | Hello, i am alice
+
   2 | bob     | 456      | Hello, i am bob
+
   3 | charlie | 789      | Hello, i am charlie
+
   4 | dan     | 101112   | Hello, i am dan
+
   5 | eve     | 131415   | Hello, i am eve
+
   6 | faythe  | 161718   | Hello, i am faythe
+
 (6 rows)
 
 ex6: 
@@ -129,9 +164,13 @@ command: SELECT * FROM users ORDER BY id DESC LIMIT 2;
 output: 
 
  id |  name  | password |        bio         
+
 ----+--------+----------+--------------------
+
   6 | faythe | 161718   | Hello, i am faythe
+
   5 | eve    | 131415   | Hello, i am eve
+
 (2 rows)
 
 ex7: 
@@ -141,10 +180,15 @@ command: SELECT * FROM users WHERE ((id % 2) = 1);
 output: 
 
  id |  name   | password |         bio         
+
 ----+---------+----------+---------------------
+
   1 | alice   | 123      | Hello, i am alice
+
   3 | charlie | 789      | Hello, i am charlie
+
   5 | eve     | 131415   | Hello, i am eve
+
 (3 rows)
 
 ex8:
@@ -158,10 +202,15 @@ command: SELECT * FROM users;
 output: 
 
  id |  name   | password |         bio         
+
 ----+---------+----------+---------------------
+
   1 | alice   | 123      | Hello, i am alice
+
   3 | charlie | 789      | Hello, i am charlie
+
   5 | eve     | 131415   | Hello, i am eve
+
 (3 rows)
 
 ex9: 
